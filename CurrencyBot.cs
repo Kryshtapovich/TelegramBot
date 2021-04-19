@@ -21,7 +21,6 @@ namespace TestBot
         {
             configuration = Configurator.GetConfiguration<BotConfiguration>("Config.json");
 
-            configuration = null;
             botClient = new TelegramBotClient(configuration.BotToken);
             converter = new Converter(configuration.RatesReference, configuration.Currencies);
 
