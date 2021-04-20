@@ -93,8 +93,8 @@ namespace TestBot
             {
                 if (operation.convert)
                 {
-                    string res = converter.CalculateRates(operation.Item1,
-                        operation.Item2, message);
+                    var res = converter.CalculateRates(operation.curr1,
+                        operation.curr2, message);
 
                     await botClient.SendTextMessageAsync(chatId, res);
                     operation = default;
